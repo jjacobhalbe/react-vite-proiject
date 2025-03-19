@@ -6,25 +6,6 @@ import { populateDB } from './utils/indexedDB' // Import the function here
 function App() {
   const [words, setWords] = useState([])
 
-  // Define the processWords function here
-  const processWords = async (wordList) => {
-    try {
-      const response = await fetch(
-        'https://node-project-production-2e8a.up.railway.app/api/process-words',
-        {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ words: wordList }),
-        }
-      )
-      const data = await response.json()
-      console.log(data) // Check the processed words
-      return data.processedWords // Returns the processed words with their levels
-    } catch (error) {
-      console.error('Error processing words:', error)
-    }
-  }
-
   useEffect(() => {
     // Fetch word-level data from your backend server (make sure the URL is correct)
     fetch(
