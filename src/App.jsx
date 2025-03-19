@@ -26,8 +26,10 @@ function App() {
   }
 
   useEffect(() => {
-    // Fetch word-level data from your backend server
-    fetch('https://node-project-production-2e8a.up.railway.app') // Update this to match your backend's URL if deployed
+    // Fetch word-level data from your backend server (make sure the URL is correct)
+    fetch(
+      'https://node-project-production-2e8a.up.railway.app/api/process-words'
+    ) // Ensure this is the right endpoint
       .then((response) => response.json()) // Parse the response as JSON
       .then((data) => {
         setWords(data) // Set the fetched word-level data to state
@@ -41,13 +43,6 @@ function App() {
           .catch((error) => {
             console.error('Error populating IndexedDB:', error)
           })
-
-        // Process the words with the backend API
-        processWords(data).then((processedWords) => {
-          // Optionally update the state with processed words if needed
-          setWords(processedWords)
-          console.log('Processed words with levels:', processedWords)
-        })
       })
       .catch((error) => console.error('Error fetching words:', error))
   }, []) // Empty array ensures this runs once when the component is mounted
