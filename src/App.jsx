@@ -7,17 +7,29 @@ function App() {
   const [words, setWords] = useState([])
 
   useEffect(() => {
-    // Fetch word-level data from your backend server (make sure the URL is correct)
+    // The words array that you want to classify
+    const wordsToProcess = ['word1', 'word2', 'word3'] // Example list of words
+
+    // Send a POST request to your backend server with the word list
     fetch(
-      'https://node-project-production-2e8a.up.railway.app/api/process-words'
-    ) // Ensure this is the right endpoint
+      'https://node-project-production-2e8a.up.railway.app/api/process-words',
+      {
+        method: 'POST', // Use POST instead of GET
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ words: wordsToProcess }), // Send the word list in the body
+      }
+    )
       .then((response) => response.json()) // Parse the response as JSON
       .then((data) => {
-        setWords(data) // Set the fetched word-level data to state
-        console.log(`Fetched ${data.length} words with their levels`) // Log the fetched words
+        setWords(data.processedWords) // Set the fetched word-level data to state
+        console.log(
+          `Fetched ${data.processedWords.length} words with their levels`
+        )
 
         // Populate IndexedDB with the word-level data after setting state
-        populateDB(data) // Pass the fetched word-level data to populateDB
+        populateDB(data.processedWords) // Pass the fetched word-level data to populateDB
           .then(() => {
             console.log('IndexedDB populated successfully!')
           })
