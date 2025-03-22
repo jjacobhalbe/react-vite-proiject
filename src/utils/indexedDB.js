@@ -12,31 +12,22 @@ const initDB = async () => {
       }
     },
   })
-  return dbw
+  return db
 }
 
-// Fetch the word list from the GitHub repository
-const fetchWordList = async () => {
-  const response = await fetch(
-    'https://raw.githubusercontent.com/jjacobhalbe/react-vite-proiject/main/public/20k.txt'
-  )
-  const text = await response.text()
-  const words = text.split('\n').map((word) => word.trim())
-  console.log(`Loaded ${words.length} words!`)
-  return words
-}
-
-// Populate the IndexedDB with words
 const populateDB = async () => {
-  const words = await fetchWordList()
   const db = await initDB()
+
+  // ✅ Fetch words from OUR backend
+  const response = await fetch('http://localhost:8080/api/word-list')
+  const words = await response.json()
+
   const tx = db.transaction(STORE_NAME, 'readwrite')
   const store = tx.objectStore(STORE_NAME)
 
   for (const word of words) {
-    // No need to check if the word exists because we'll use the AI to update the levels later
     store.put({ word, level: 'unknown' })
-    console.log(`Added word: ${word}`) // Log each word added
+    console.log(`Added word: ${word}`)
   }
 
   await tx.done
