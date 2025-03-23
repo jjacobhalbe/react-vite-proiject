@@ -18,7 +18,7 @@ const populateDB = async () => {
   const db = await initDB()
   try {
     const response = await fetch(
-      'https://node-project-production-2e8a.up.railway.app/api/classify-all',
+      'https://node-project-production-2e8a.up.railway.app/api/classify',
       {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
