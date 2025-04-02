@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import InputsContainer from './components/InputsContainer'
 import MainInput from './components/MainInput'
+import Navbar from './components/Navbar'
 import { populateDB, getAllWords } from './utils/indexedDB'
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
   return (
     <>
       <MainInput />
+      <Navbar />
       <InputsContainer words={words} />
     </>
   )
