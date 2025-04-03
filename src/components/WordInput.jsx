@@ -1,11 +1,9 @@
 const WordInput = () => {
   return (
-    <>
-      <div className="resultContainer">
-        <p className="wordLevel">Word level</p>
-        <div className="input input--word"></div>
-      </div>
-    </>
+    <div className="flex flex-col items-center">
+      <p className="text-gray-700 font-bold text-xl">Word level</p>
+      <div className="w-[120vh] max-w-[300px] h-[20vh] border-2 border-gray-300 rounded-lg bg-white"></div>
+    </div>
   )
 }
 

@@ -31,8 +31,8 @@ function App() {
 
   return (
     <>
-      <MainInput />
       <Navbar />
+      <MainInput />
       <InputsContainer words={words} />
     </>
   )
