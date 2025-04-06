@@ -22,14 +22,13 @@ const populateDB = async () => {
       {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({}),
+        body: JSON.stringify({}), // No payload needed; server reads from words.json
       }
     )
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`)
     }
     const data = await response.json()
-    console.log('🔍 API Response:', data)
     const words = data.processedWords || []
 
     const tx = db.transaction(STORE_NAME, 'readwrite')
