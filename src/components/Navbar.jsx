@@ -5,18 +5,17 @@ const Navbar = () => {
 
   return (
     <nav className="bg-blue-600 p-4 text-white shadow-lg">
-      <div className="container mx-auto flex justify-between items-center">
-        {/* Logo */}
+      <div className="w-full max-w-screen-xl mx-auto flex justify-between items-center">
         <h1 className="text-xl font-bold">My Website</h1>
 
-        {/* Menu Button (Mobile) */}
         <button
           className="md:hidden text-white focus:outline-none"
           onClick={() => setIsOpen(!isOpen)}
         >
           ☰
         </button>
-        <ul className={`md:flex gap-6 ${isOpen ? 'block' : 'hidden'} md:block`}>
+
+        <ul className={`gap-6 ${isOpen ? 'block' : 'hidden'} md:flex`}>
           <li>
             <a href="#" className="hover:text-gray-200">
               Home
