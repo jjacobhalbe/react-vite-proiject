@@ -22,7 +22,7 @@ const populateDB = async () => {
       {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({}), // No payload needed; server reads from words.json
+        body: JSON.stringify({}),
       }
     )
     if (!response.ok) {

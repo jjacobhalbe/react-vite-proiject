@@ -1,5 +1,9 @@
-const Button = () => {
-  return <button className="checkTheLevel">Check the Level</button>
+const Button = ({ onClick }) => {
+  return (
+    <button className="checkTheLevel" onClick={onClick}>
+      Check the Level
+    </button>
+  )
 }
 
 export default Button
