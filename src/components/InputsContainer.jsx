@@ -1,3 +1,6 @@
+import WordInput from './WordInput'
+import SentInput from './SentInput'
+
 const InputsContainer = ({ wordResults, sentenceResults }) => {
   return (
     <section className="inputsContainer">
@@ -6,3 +9,5 @@ const InputsContainer = ({ wordResults, sentenceResults }) => {
     </section>
   )
 }
+
+export default InputsContainer

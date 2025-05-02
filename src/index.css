@@ -147,7 +147,7 @@ body {
 
 @media screen and (min-width: 760px) {
   .inputsContainer {
-    flex-direction: column;
+    flex-direction: row;
     gap: 10vh;
   }
   .main-container {

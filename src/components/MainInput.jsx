@@ -18,6 +18,7 @@ const MainInput = ({ onWordsUpdate, onSentencesUpdate }) => {
 
       onSentencesUpdate(result.sentences)
       onWordsUpdate(result.classifiedWords)
+      console.log('clearing input')
       setText('')
     } catch (error) {
       console.error('Error:', error)
