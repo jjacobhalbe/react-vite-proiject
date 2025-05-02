@@ -1,17 +1,26 @@
 import { useState } from 'react'
 import Button from './Button'
 
-const MainInput = () => {
+const MainInput = ({ onWordsUpdate, onSentencesUpdate }) => {
   const [text, setText] = useState('')
 
-  const handleCheckLevel = () => {
-    console.log('🚀 Text to process:', text)
-  }
+  const handleCheckLevel = async () => {
+    const data = { text }
 
-  const handleKeyDown = (e) => {
-    if ((e.ctrlKey || e.metaKey) && e.key === 'Enter') {
-      e.preventDefault()
-      handleCheckLevel()
+    try {
+      const response = await fetch('http://localhost:8080/api/classify', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      })
+
+      const result = await response.json()
+
+      onSentencesUpdate(result.sentences)
+      onWordsUpdate(result.classifiedWords)
+      setText('')
+    } catch (error) {
+      console.error('Error:', error)
     }
   }
 
@@ -23,7 +32,12 @@ const MainInput = () => {
           className="mainInput"
           value={text}
           onChange={(e) => setText(e.target.value)}
-          onKeyDown={handleKeyDown}
+          onKeyDown={(e) => {
+            if (e.key === 'Enter') {
+              e.preventDefault()
+              handleCheckLevel()
+            }
+          }}
         ></textarea>
         <Button onClick={handleCheckLevel} />
       </div>

@@ -15,6 +15,40 @@ body {
   background-color: #f7f9fc;
 }
 
+.word-span {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 4px;
+  margin: 2px;
+  color: #fff;
+  font-size: 14px;
+}
+
+.a1 {
+  background-color: #e0f7fa;
+}
+.a2 {
+  background-color: #ffe0b2;
+}
+.b1 {
+  background-color: #ffb2b2;
+}
+.b2 {
+  background-color: #e7b2ff;
+}
+
+.c1 {
+  background-color: #7ad4d0;
+}
+
+.c2 {
+  background-color: #ff478b;
+}
+
+.unknown {
+  background-color: #9e9e9e;
+}
+
 .mainInput {
   width: 70%;
   height: 35vh;
@@ -113,7 +147,7 @@ body {
 
 @media screen and (min-width: 760px) {
   .inputsContainer {
-    flex-direction: row;
+    flex-direction: column;
     gap: 10vh;
   }
   .main-container {

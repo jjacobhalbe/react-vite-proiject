@@ -1,15 +1,8 @@
-import WordInput from './WordInput'
-import SentInput from './SentInput'
-
-const InputsContainer = () => {
+const InputsContainer = ({ wordResults, sentenceResults }) => {
   return (
-    <section>
-      <div className="inputsContainer">
-        <WordInput />
-        <SentInput />
-      </div>
+    <section className="inputsContainer">
+      <WordInput wordResults={wordResults} />
+      <SentInput sentenceResults={sentenceResults} />
     </section>
   )
 }
-
-export default InputsContainer
