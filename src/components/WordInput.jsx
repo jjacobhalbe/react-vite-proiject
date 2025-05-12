@@ -4,9 +4,12 @@ const WordInput = ({ wordResults }) => {
       <p className="wordLevel">Word level</p>
       <div className="input input--word">
         {(wordResults || []).map((item, index) => (
-          <span key={index} className={`word-span ${item.level.toLowerCase()}`}>
-            {item.word} ({item.level})
-          </span>
+          <p className="outputText" key={index}>
+            {item.word}{' '}
+            <span className={`word-span ${item.level.toLowerCase()}`}>
+              {item.level}
+            </span>
+          </p>
         ))}
       </div>
     </div>
