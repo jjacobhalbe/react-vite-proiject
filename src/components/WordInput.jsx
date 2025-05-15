@@ -6,9 +6,7 @@ const WordInput = ({ wordResults }) => {
         {(wordResults || []).map((item, index) => (
           <p className="outputText" key={index}>
             {item.word}{' '}
-            <span className={`word-span ${item.level.toLowerCase()}`}>
-              {item.level}
-            </span>
+            <span className={`word-span ${item.level}`}>{item.level}</span>
           </p>
         ))}
       </div>

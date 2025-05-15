@@ -17,7 +17,7 @@ const MainInput = ({ onWordsUpdate, onSentencesUpdate }) => {
       const result = await response.json()
 
       onSentencesUpdate(result.sentences)
-      onWordsUpdate(result.classifiedWords)
+      onWordsUpdate(result.words)
       console.log('clearing input')
       setText('')
     } catch (error) {
