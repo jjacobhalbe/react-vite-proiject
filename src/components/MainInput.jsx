@@ -3,6 +3,7 @@ import Button from './Button'
 
 const MainInput = ({ onWordsUpdate, onSentencesUpdate }) => {
   const [text, setText] = useState('')
+  const [error, setError] = useState(null)
 
   const handleCheckLevel = async () => {
     const data = { text }
@@ -16,12 +17,19 @@ const MainInput = ({ onWordsUpdate, onSentencesUpdate }) => {
 
       const result = await response.json()
 
+      if (result.error) {
+        setError(result.error)
+        setTimeout(() => setError(null), 5000)
+        return
+      }
+
       onSentencesUpdate(result.sentences)
       onWordsUpdate(result.words)
-      console.log('clearing input')
       setText('')
     } catch (error) {
       console.error('Error:', error)
+      setError('Something went wrong. Please try again.')
+      setTimeout(() => setError(null), 5000)
     }
   }
 
@@ -40,7 +48,9 @@ const MainInput = ({ onWordsUpdate, onSentencesUpdate }) => {
             }
           }}
         ></textarea>
+
         <Button onClick={handleCheckLevel} />
+        {error && <p className="errMsg">{error}</p>}
       </div>
     </main>
   )
