@@ -20,7 +20,6 @@
   cursor: pointer;
 }
 
-/* Show tooltip on hover */
 .word-span:hover .tooltip {
   visibility: visible;
   opacity: 1;

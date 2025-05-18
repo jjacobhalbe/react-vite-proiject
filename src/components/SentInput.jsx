@@ -1,3 +1,5 @@
+import LevelBadge from './LevelBadge'
+
 const SentInput = ({ sentenceResults }) => {
   return (
     <div className="resultContainer">

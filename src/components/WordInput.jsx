@@ -1,3 +1,5 @@
+import LevelBadge from './LevelBadge'
+
 const WordInput = ({ wordResults }) => {
   return (
     <div className="resultContainer">
