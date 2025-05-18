@@ -8,10 +8,7 @@ const SentInput = ({ sentenceResults }) => {
         {(sentenceResults || []).map((item, index) => (
           <div key={index} className="outputText">
             <p>
-              {item.sentence}{' '}
-              <span className={`word-span ${item.sentenceLevel}`}>
-                {item.sentenceLevel}
-              </span>
+              {item.sentence} <LevelBadge level={item.sentenceLevel} />
             </p>
           </div>
         ))}

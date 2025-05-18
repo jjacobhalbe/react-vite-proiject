@@ -7,8 +7,7 @@ const WordInput = ({ wordResults }) => {
       <div className="input input--word">
         {(wordResults || []).map((item, index) => (
           <p className="outputText" key={index}>
-            {item.word}{' '}
-            <span className={`word-span ${item.level}`}>{item.level}</span>
+            {item.word} <LevelBadge level={item.level} />
           </p>
         ))}
       </div>
