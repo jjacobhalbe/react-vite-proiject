@@ -1,0 +1,27 @@
+.tooltip {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  white-space: nowrap;
+  z-index: 10;
+  transition: opacity 0.3s ease;
+  font-size: 0.75rem;
+}
+
+.word-span {
+  position: relative;
+  cursor: pointer;
+}
+
+/* Show tooltip on hover */
+.word-span:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
