@@ -25,6 +25,8 @@ export const levelDefinitions = {
   },
   unknown: {
     description: 'No CEFR level assigned to this word.',
-    link: 'https://en.wikipedia.org/wiki/Common_European_Framework_of_Reference_for_Languages',
   },
+  /*singleLetter: {
+    description: 'Single letters do not have CEFR levels.',
+  },*/
 }

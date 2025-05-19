@@ -3,26 +3,26 @@ import { levelDefinitions } from '../utils/definitions'
 import '../tooltip.css'
 
 const LevelBadge = ({ level }) => {
-  const definition = levelDefinitions[level]
+  const info = levelDefinitions[level] || {}
+  const { description, link } = info
 
   return (
     <span className={`word-span ${level}`}>
       {level}
       <span className="tooltip">
-        {definition ? (
+        {description}
+        {link && (
           <>
-            <div>{definition.description}</div>
+            <br />
             <a
-              href={definition.link}
+              href={link}
               target="_blank"
               rel="noopener noreferrer"
               className="wiki-link"
             >
-              See full definition
+              Learn more
             </a>
           </>
-        ) : (
-          'No definition available.'
         )}
       </span>
     </span>
