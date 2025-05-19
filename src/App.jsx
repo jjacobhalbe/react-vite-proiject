@@ -9,9 +9,13 @@ function App() {
   const [sentences, setSentences] = useState([])
   const [isSidebarOpen, setSidebarOpen] = useState(false)
 
+  const toggleSidebar = () => {
+    setSidebarOpen(!isSidebarOpen)
+  }
+
   return (
     <>
-      <Hamburger onClick={() => setSidebarOpen(true)} />
+      <Hamburger onClick={toggleSidebar} isActive={isSidebarOpen} />
       <Sidebar isOpen={isSidebarOpen} onClose={() => setSidebarOpen(false)} />
       <MainInput
         onWordsUpdate={setClassifiedWords}

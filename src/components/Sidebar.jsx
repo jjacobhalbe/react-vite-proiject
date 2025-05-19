@@ -1,18 +1,21 @@
 import React from 'react'
-import './sidebar.css'
-
+import '../sidebar.css'
 const Sidebar = ({ isOpen, onClose }) => {
   return (
     <div className={`sidebar ${isOpen ? 'open' : ''}`}>
       <button className="close-btn" onClick={onClose}>
-        ✖
+        ✕
       </button>
-      <h2>Menu</h2>
       <ul>
-        <li>Home</li>
-        <li>Your CEFR Words</li>
-        <li>Settings</li>
-        <li>About</li>
+        <li>
+          <a href="#about">About CEFR</a>
+        </li>
+        <li>
+          <a href="#levels">Level Descriptions</a>
+        </li>
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
       </ul>
     </div>
   )

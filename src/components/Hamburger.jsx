@@ -1,12 +1,15 @@
 import React from 'react'
-import './sidebar.css'
+import '../sidebar.css'
 
-const Hamburger = ({ onClick }) => {
+const Hamburger = ({ onClick, isActive }) => {
   return (
-    <div className="hamburger" onClick={onClick}>
+    <button
+      onClick={onClick}
+      className={`hamburger-btn ${isActive ? 'active' : ''}`}
+      aria-label="Toggle sidebar menu"
+    >
       ☰
-    </div>
+    </button>
   )
 }
-
 export default Hamburger
