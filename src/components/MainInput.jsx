@@ -7,7 +7,7 @@ const MainInput = ({ onWordsUpdate, onSentencesUpdate }) => {
 
   const handleCheckLevel = async () => {
     const data = { text }
-
+    //comment
     try {
       const response = await fetch('http://localhost:8080/api/classify', {
         method: 'POST',
