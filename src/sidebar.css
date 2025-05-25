@@ -26,11 +26,13 @@
   height: auto;
   max-height: 90vh;
   overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .sidebar.open {
   left: 20px;
 }
+
 .sidebar .close-btn {
   position: absolute;
   top: 10px;
@@ -60,4 +62,72 @@
 
 .sidebar a:hover {
   text-decoration: underline;
+}
+
+.accordion-button {
+  all: unset;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  padding: 10px 15px;
+}
+
+.accordion-button:hover {
+  text-decoration: underline;
+}
+
+.accordion-content p {
+  margin: 0 15px 0px 15px;
+  padding-bottom: 10px;
+  color: white;
+  font-size: 0.9rem;
+  line-height: 1.3;
+}
+
+.wiki-link {
+  color: #87f9ff !important;
+  text-decoration: none;
+  margin-top: 5px;
+  font-size: 11px;
+}
+
+.levels {
+  color: #87f9ff;
+  text-decoration: none;
+  font-size: 16px !important;
+}
+
+.levels:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.github {
+  margin-left: 15px;
+}
+
+.wiki-link:hover {
+  text-decoration: underline;
+}
+
+.AA1 {
+  color: #e0f7fa;
+}
+.AA2 {
+  color: #ffe0b2;
+}
+.BB1 {
+  color: #ffb2b2;
+}
+.BB2 {
+  color: #e7b2ff;
+}
+.CC1 {
+  color: #7ad4d0;
+}
+.CC2 {
+  color: #ff478b;
 }
