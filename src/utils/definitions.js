@@ -26,7 +26,4 @@ export const levelDefinitions = {
   unknown: {
     description: 'No CEFR level assigned to this word.',
   },
-  /*singleLetter: {
-    description: 'Single letters do not have CEFR levels.',
-  },*/
 }

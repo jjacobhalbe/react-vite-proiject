@@ -200,6 +200,8 @@ button {
   position: absolute;
   color: red;
   font-weight: bold;
+  top: 10vh;
+  font-size: 14px;
 }
 
 @media screen and (min-width: 760px) {
@@ -209,5 +211,12 @@ button {
   }
   .main-container {
     width: 70%;
+  }
+  .errMsg {
+    position: absolute;
+    color: red;
+    font-weight: bold;
+    top: 10vh;
+    font-size: 3vh;
   }
 }

@@ -1,14 +1,23 @@
 .hamburger-btn {
   position: fixed;
   top: 20px;
-  left: 20px;
   font-size: 30px;
   background: transparent;
   border: none;
   color: #333;
   cursor: pointer;
   z-index: 9999;
-  transition: color 0.3s ease;
+  transition: color 0.2s ease;
+  padding: 0;
+  transform: scale(0.9);
+}
+
+.hamburger-btn:hover {
+  color: #afafaf;
+}
+
+.hamburger-btn:active {
+  color: #333;
 }
 
 .sidebar {
@@ -42,6 +51,11 @@
   color: white;
   font-size: 18px;
   cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.close-btn:hover {
+  color: #87f9ff;
 }
 
 .sidebar ul {
