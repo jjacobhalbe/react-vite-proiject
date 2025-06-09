@@ -143,6 +143,16 @@ button {
   height: 10vh;
 }
 
+.clearButton {
+  padding: 10px 20px;
+  font-size: 20px;
+  border-radius: 8px;
+  background: #ff4d4d;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
 .checkTheLevel:hover {
   background-color: black;
   color: var(--primary-white);
