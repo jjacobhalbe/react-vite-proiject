@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import Button from './Button'
+import '../styles/inputs.css'
+import '../styles/button.css'
 
 const MainInput = ({ onWordsUpdate, onSentencesUpdate }) => {
   const [text, setText] = useState('')

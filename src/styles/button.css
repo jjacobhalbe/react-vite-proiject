@@ -8,6 +8,9 @@ button {
   justify-content: center;
 }
 
+.clear {
+}
+
 .checkTheLevel {
   background-color: var(--button-black);
   color: var(--font-color);
