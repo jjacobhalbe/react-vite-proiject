@@ -1,0 +1,33 @@
+button {
+  font-family: 'Inter', sans-serif;
+}
+
+.buttonDiv {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.checkTheLevel {
+  background-color: var(--button-black);
+  color: var(--font-color);
+  font-weight: bold;
+  border: 0;
+  font-size: 20px;
+  padding: 10px 20px;
+  border-radius: 30px;
+  box-shadow: 0 4px 6px #0000001a;
+  transition: background-color 0.4s ease;
+  width: 100%;
+  max-width: 35vh;
+  height: 10vh;
+}
+
+.checkTheLevel:hover {
+  background-color: black;
+  color: var(--primary-white);
+}
+
+.checkTheLevel:active {
+  background-color: var(--text-color);
+}

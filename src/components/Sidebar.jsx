@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react'
-import '../sidebar.css'
+import '../styles/sidebar.css'
 
 const AccordionItem = ({ title, isOpen, onClick, children }) => {
   const contentRef = useRef(null)

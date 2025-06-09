@@ -1,6 +1,6 @@
 import React from 'react'
 import { levelDefinitions } from '../utils/definitions'
-import '../tooltip.css'
+import '../styles/tooltip.css'
 
 const LevelBadge = ({ level }) => {
   const info = levelDefinitions[level] || {}
