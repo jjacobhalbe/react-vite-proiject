@@ -145,6 +145,30 @@
   margin: 0 0 5px 0;
 }
 
+.errorPlaceholder::placeholder {
+  color: crimson;
+}
+
+@keyframes placeholderBlink {
+  0% {
+    color: crimson;
+    opacity: 1;
+  }
+  50% {
+    color: crimson;
+    opacity: 0.4;
+  }
+  100% {
+    color: crimson;
+    opacity: 1;
+  }
+}
+
+.mainInput.errorPlaceholder::placeholder {
+  color: crimson;
+  animation: placeholderBlink 0.8s ease-in-out 3;
+}
+
 @media screen and (min-width: 760px) {
   .inputsContainer {
     flex-direction: row;

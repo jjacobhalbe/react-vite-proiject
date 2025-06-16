@@ -2,13 +2,40 @@ button {
   font-family: 'Inter', sans-serif;
 }
 
-.buttonDiv {
-  width: 100%;
+.buttonsContainer {
   display: flex;
+  align-items: center;
   justify-content: center;
+  width: 100%;
+  gap: 10vh;
 }
 
-.clear {
+.clearButton {
+  width: 4vh;
+  height: 4vh;
+  color: var(--font-color);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.iconButton {
+  background-color: var(--button-black);
+  border-radius: 25px;
+  padding: 0;
+  cursor: pointer;
+  width: 15vh;
+  max-width: 35vh;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px #0000001a;
+  transition: background-color 0.4s ease;
+  min-width: 10px;
+  min-height: 5vh;
+}
+
+.iconButton:hover .clearButton {
+  transform: rotate(-540deg);
 }
 
 .checkTheLevel {
@@ -20,10 +47,12 @@ button {
   padding: 10px 20px;
   border-radius: 30px;
   box-shadow: 0 4px 6px #0000001a;
-  transition: background-color 0.4s ease;
+  transition: background-color 0.5s ease;
   width: 100%;
   max-width: 35vh;
   height: 10vh;
+  min-width: 20vh;
+  min-height: 5vh;
 }
 
 .checkTheLevel:hover {
@@ -31,6 +60,7 @@ button {
   color: var(--primary-white);
 }
 
-.checkTheLevel:active {
+.checkTheLevel:active,
+.iconButton:active {
   background-color: var(--text-color);
 }
