@@ -2,23 +2,19 @@ import { useState } from 'react'
 import Button from './Button'
 import '../styles/inputs.css'
 import '../styles/button.css'
-import '../components/ClearButton'
 import ClearButton from '../components/ClearButton'
+import { triggerPlaceholderError } from '../utils/triggerPlaceholderError'
 
 const MainInput = ({ onWordsUpdate, onSentencesUpdate }) => {
   const [text, setText] = useState('')
   const [placeholder, setPlaceholder] = useState('Paste your text here...')
   const [placeholderError, setPlaceholderError] = useState(false)
+  const [error, setError] = useState(null)
 
   const handleCheckLevel = async () => {
     if (!text.trim()) {
-      setPlaceholder('You cannot enter nothing!')
-      setPlaceholderError(true)
+      triggerPlaceholderError(setPlaceholder, setPlaceholderError)
       setText('')
-      setTimeout(() => {
-        setPlaceholder('Paste your text here...')
-        setPlaceholderError(false)
-      }, 3000)
       return
     }
 
