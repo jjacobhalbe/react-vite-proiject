@@ -8,7 +8,7 @@ export const triggerPlaceholderError = (
 
   setTimeout(() => {
     document.documentElement.style.setProperty('--placeholder-color', '#999')
-  }, 500)
+  }, 600)
 
   setTimeout(() => {
     setPlaceholder('Paste your text here...')
