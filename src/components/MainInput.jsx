@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import Button from './Button'
 import '../styles/inputs.css'
-import '../styles/button.css'
+import '../styles/buttons.css'
 import ClearButton from '../components/ClearButton'
 import { triggerPlaceholderError } from '../utils/triggerPlaceholderError'
 
