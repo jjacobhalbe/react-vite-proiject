@@ -49,6 +49,8 @@ const MainInput = ({ onWordsUpdate, onSentencesUpdate }) => {
     <main>
       <section className="main-container">
         <textarea
+          id="usersInputContainer"
+          name="usersTextArea"
           placeholder={placeholder}
           className={`mainInput ${placeholderError ? 'errorPlaceholder' : ''}`}
           value={text}

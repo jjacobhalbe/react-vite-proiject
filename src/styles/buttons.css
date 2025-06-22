@@ -43,7 +43,7 @@ button {
   color: var(--font-color);
   font-weight: bold;
   border: 0;
-  font-size: 20px;
+  font-size: 3vh;
   padding: 10px 20px;
   border-radius: 30px;
   box-shadow: 0 4px 6px #0000001a;

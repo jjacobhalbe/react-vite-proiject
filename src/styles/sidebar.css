@@ -23,7 +23,7 @@
 .sidebar {
   position: fixed;
   top: 60px;
-  left: -300px;
+  left: -300px; /* hmmm... */
   width: 220px;
   background-color: black;
   color: white;

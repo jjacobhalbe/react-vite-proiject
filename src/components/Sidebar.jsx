@@ -73,12 +73,22 @@ const Sidebar = ({ isOpen, onClose }) => {
           isOpen={openSection === 'levels'}
           onClick={() => toggleSection('levels')}
         >
-          <p className="levels AA1">A1</p>
-          <p className="levels AA2">A2</p>
-          <p className="levels BB1">B1</p>
-          <p className="levels BB2">B2</p>
-          <p className="levels CC1">C1</p>
-          <p className="levels CC2">C2</p>
+          <p className="levels AA1">A1 — Beginner, everyday phrases.</p>
+          <p className="levels AA2">
+            A2 — Simple interactions, familiar topics.
+          </p>
+          <p className="levels BB1">
+            B1 — Can deal with most travel situations.
+          </p>
+          <p className="levels BB2">
+            B2 — Can discuss abstract ideas and opinions.
+          </p>
+          <p className="levels CC1">
+            C1 — Fluent, spontaneous, complex discussions.
+          </p>
+          <p className="levels CC2">
+            C2 — Near-native, nuanced, idiomatic use.
+          </p>
         </AccordionItem>
 
         <AccordionItem
