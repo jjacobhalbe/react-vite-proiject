@@ -1,7 +1,5 @@
 import { useState } from 'react'
 import Button from './Button'
-import '../styles/inputs.css'
-import '../styles/buttons.css'
 import ClearButton from '../components/ClearButton'
 import { triggerPlaceholderError } from '../utils/triggerPlaceholderError'
 
@@ -45,6 +43,12 @@ const MainInput = ({ onWordsUpdate, onSentencesUpdate }) => {
     }
   }
 
+  const handleClearAll = () => {
+    setText('')
+    onWordsUpdate([])
+    onSentencesUpdate([])
+  }
+
   return (
     <main>
       <section className="main-container">
@@ -64,7 +68,7 @@ const MainInput = ({ onWordsUpdate, onSentencesUpdate }) => {
         ></textarea>
         <div className="buttonsContainer">
           <Button onClick={handleCheckLevel} />
-          <ClearButton />
+          <ClearButton onClick={handleClearAll} />
         </div>
       </section>
     </main>

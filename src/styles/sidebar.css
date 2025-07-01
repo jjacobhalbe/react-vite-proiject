@@ -4,7 +4,7 @@
   font-size: 30px;
   background: transparent;
   border: none;
-  color: #333;
+  color: var(--text-primary);
   cursor: pointer;
   z-index: 9999;
   transition: color 0.2s ease;
@@ -13,25 +13,27 @@
 }
 
 .hamburger-btn:hover {
-  color: #afafaf;
+  color: var(--border-hover);
 }
 
 .hamburger-btn:active {
-  color: #333;
+  color: var(--text-primary);
 }
 
 .sidebar {
   position: fixed;
   top: 60px;
-  left: -300px; /* hmmm... */
+  left: -300px;
   width: 220px;
-  background-color: black;
-  color: white;
+  background-color: var(--bg-input);
+  border: 2px solid var(--border-main);
+  border-radius: 4px;
+  color: var(--text-primary);
   transition: left 0.3s ease;
   z-index: 9998;
   padding: 20px;
   border-radius: 0 0 10px 10px;
-  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.4);
+  box-shadow: 3px 3px 8px var(--shadow-main);
   height: auto;
   max-height: 90vh;
   overflow-y: auto;
@@ -48,14 +50,14 @@
   right: 10px;
   background: none;
   border: none;
-  color: white;
+  color: var(--text-primary);
   font-size: 18px;
   cursor: pointer;
   transition: color 0.2s ease;
 }
 
 .close-btn:hover {
-  color: #87f9ff;
+  color: var(--text-secondary);
 }
 
 .sidebar ul {
@@ -69,7 +71,7 @@
 }
 
 .sidebar a {
-  color: white;
+  color: var(--text-primary);
   text-decoration: none;
   font-size: 16px;
 }
@@ -96,20 +98,19 @@
 .accordion-content p {
   margin: 0 15px 0px 15px;
   padding-bottom: 10px;
-  color: white;
+  color: var(--text-primary);
   font-size: 0.9rem;
   line-height: 1.3;
 }
 
 .wiki-link {
-  color: #87f9ff !important;
+  color: var(--bg-check-button) !important;
   text-decoration: none;
   margin-top: 5px;
   font-size: 11px;
 }
 
 .levels {
-  color: #87f9ff;
   text-decoration: none;
   font-size: 16px !important;
 }
@@ -128,20 +129,27 @@
 }
 
 .AA1 {
-  color: #e0f7fa;
+  color: var(--color-a1);
 }
 .AA2 {
-  color: #ffe0b2;
+  color: var(--color-a2);
 }
 .BB1 {
-  color: #ffb2b2;
+  color: var(--color-b1);
 }
 .BB2 {
-  color: #e7b2ff;
+  color: var(--color-b2);
 }
 .CC1 {
-  color: #7ad4d0;
+  color: var(--color-c1);
 }
 .CC2 {
-  color: #ff478b;
+  color: var(--color-c2);
+}
+
+.sidebar-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }

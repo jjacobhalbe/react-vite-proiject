@@ -1,0 +1,25 @@
+body.light-theme {
+  --bg-main: #f7f9fc;
+  --bg-tooltip: #e9eff6;
+  --bg-button: #d0d7df;
+  --bg-button-hover: #c1c9d1;
+  --bg-input: #ffffff;
+  --bg-check-button: #28a745;
+
+  --text-primary: #212529;
+  --text-secondary: #2c7be5;
+  --text-on-button: #ffffff;
+
+  --border-main: #d1d5db;
+  --border-hover: #c5c9d1;
+  --shadow-main: #00000020;
+
+  --color-error: #e63946;
+
+  --color-a1: #b2ebf2;
+  --color-a2: #fff3cd;
+  --color-b1: #ffd6d6;
+  --color-b2: #f3d1ff;
+  --color-c1: #a0e9e5;
+  --color-c2: #ff80ab;
+}

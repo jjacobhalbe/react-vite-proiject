@@ -5,8 +5,8 @@
   bottom: 125%;
   left: 50%;
   transform: translateX(-50%) translateY(-5px) scale(0.95);
-  background-color: #333;
-  color: #fff;
+  background-color: var(--bg-input);
+  color: var(--text-primary);
   padding: 5px 8px;
   border-radius: 5px;
   transition: opacity 0.3s ease, transform 0.3s ease;
@@ -16,6 +16,7 @@
 }
 
 .word-span {
+  color: var(--bg-input);
   position: relative;
   cursor: pointer;
 }
@@ -27,9 +28,13 @@
 }
 
 .wiki-link {
-  color: #87f9ff;
+  color: var(--bg-check-button);
   text-decoration: none;
   display: block;
   margin-top: 5px;
   font-size: 11px;
+}
+
+.outputText {
+  color: var(--text-primary);
 }

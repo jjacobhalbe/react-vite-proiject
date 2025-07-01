@@ -1,26 +1,37 @@
 button {
   font-family: 'Inter', sans-serif;
+  background: none;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  padding: 0;
+  margin: 0;
+  appearance: none;
+  -webkit-appearance: none;
 }
 
 .buttonsContainer {
+  width: 100%;
+  height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  gap: 10vh;
+  gap: 5vh;
 }
 
 .clearButton {
+  outline: none;
   width: 4vh;
   height: 4vh;
-  color: var(--font-color);
-  transition: transform 0.3s ease, color 0.3s ease;
+  color: var(--text-primary);
+  transition: transform 0.3s ease, color 0.3s ease, opacity 0.3s ease;
 }
 
 .iconButton {
-  background-color: var(--button-black);
+  outline: none;
+  background-color: var(--bg-button);
   border-radius: 25px;
-  padding: 0;
+  padding: 2vh;
   cursor: pointer;
   width: 15vh;
   max-width: 35vh;
@@ -28,10 +39,9 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 6px #0000001a;
-  transition: background-color 0.4s ease;
-  min-width: 10px;
-  min-height: 5vh;
+  transition: background-color 0.4s ease, opacity 0.3s ease;
+  min-width: 10vh;
+  min-height: 10vh;
 }
 
 .iconButton:hover .clearButton {
@@ -39,15 +49,15 @@ button {
 }
 
 .checkTheLevel {
-  background-color: var(--button-black);
-  color: var(--font-color);
+  background-color: var(--bg-check-button);
+  color: var(--text-on-button);
   font-weight: bold;
   border: 0;
   font-size: 3vh;
   padding: 10px 20px;
   border-radius: 30px;
-  box-shadow: 0 4px 6px #0000001a;
-  transition: background-color 0.5s ease;
+  box-shadow: 0 4px 6px var(--shadow-main);
+  transition: opacity 0.3s ease;
   width: 100%;
   max-width: 35vh;
   height: 10vh;
@@ -55,12 +65,55 @@ button {
   min-height: 5vh;
 }
 
-.checkTheLevel:hover {
-  background-color: black;
-  color: var(--primary-white);
+.checkTheLevel:hover,
+.iconButton:hover {
+  opacity: 0.8;
 }
 
 .checkTheLevel:active,
 .iconButton:active {
-  background-color: var(--text-color);
+  opacity: 0.5;
+}
+
+.pill-toggle-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 12px 0;
+  padding: 0 12px;
+}
+
+.toggle-label {
+  color: var(--text-color);
+  font-size: 1rem;
+}
+
+.pill-toggle {
+  width: 48px;
+  height: 24px;
+  background-color: #cab0f5;
+  border: none;
+  border-radius: 999px;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pill-toggle.active {
+  background-color: #1ea663;
+}
+
+.pill-indicator {
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: transform 0.3s ease;
+}
+
+.pill-toggle.active .pill-indicator {
+  transform: translateX(24px);
 }

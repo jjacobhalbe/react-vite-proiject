@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react'
+import ThemeTogglePill from './ThemeTogglePill'
 import '../styles/sidebar.css'
 
 const AccordionItem = ({ title, isOpen, onClick, children }) => {
@@ -42,9 +43,15 @@ const Sidebar = ({ isOpen, onClose }) => {
 
   return (
     <div className={`sidebar ${isOpen ? 'open' : ''}`}>
-      <button className="close-btn" onClick={onClose}>
-        ✕
-      </button>
+      <div className="sidebar-buttons">
+        <button className="close-btn" onClick={onClose}>
+          ✕
+        </button>
+        <div className="theme-toggle-wrapper">
+          <ThemeTogglePill />
+        </div>
+      </div>
+
       <ul>
         <AccordionItem
           title="About CEFR"

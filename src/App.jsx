@@ -3,6 +3,7 @@ import MainInput from './components/MainInput'
 import InputsContainer from './components/InputsContainer'
 import Sidebar from './components/Sidebar'
 import Hamburger from './components/Hamburger'
+import { ThemeProvider } from './context/ThemeContext'
 
 function App() {
   const [classifiedWords, setClassifiedWords] = useState([])
@@ -14,7 +15,7 @@ function App() {
   }
 
   return (
-    <>
+    <ThemeProvider>
       <Hamburger onClick={toggleSidebar} isActive={isSidebarOpen} />
       <Sidebar isOpen={isSidebarOpen} onClose={() => setSidebarOpen(false)} />
       <MainInput
@@ -25,7 +26,7 @@ function App() {
         wordResults={classifiedWords}
         sentenceResults={sentences}
       />
-    </>
+    </ThemeProvider>
   )
 }
 

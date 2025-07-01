@@ -1,16 +1,38 @@
 :root {
-  --primary-white: #ffffff;
-  --shadow: #d1d5db;
-  --font-color: #e0e0e0;
-  --border: #ccc;
-  --border-hover: #a1a1a1;
-  --button-black: #333;
-  --text-color: #393636;
+  --bg-main: #0a0c0f;
+  --bg-tooltip: #333333;
+  --bg-button: #22272e;
+  --bg-button-hover: #000000;
+  --bg-input: #0f1015;
+  --bg-check-button: #1ea663;
+
+  --text-primary: #cfcfcf;
+  --text-secondary: #87f9ff;
+  --text-on-button: #e0e0e0;
+
+  --border-main: #2f343a;
+  --border-hover: #333333;
+  --shadow-main: #00000099;
+
+  --color-error: #eb6793;
+  --color-a1: #e0f7fa;
+  --color-a2: #ffe0b2;
+  --color-b1: #ffb2b2;
+  --color-b2: #e7b2ff;
+  --color-c1: #7ad4d0;
+  --color-c2: #ff478b;
+
+  --color-a1-hover: #b2ebf2;
+  --color-a2-hover: #ffcc80;
+  --color-b1-hover: #ff9999;
+  --color-b2-hover: #d28eff;
+  --color-c1-hover: #4acfc9;
+  --color-c2-hover: #ff1f6b;
 }
 
 body {
   font-family: 'Inter', sans-serif;
   font-weight: 700;
   line-height: 1.5;
-  background-color: #f7f9fc;
+  background-color: var(--bg-main);
 }
