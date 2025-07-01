@@ -100,13 +100,13 @@ button {
 }
 
 .pill-toggle.active {
-  background-color: #1ea663;
+  background-color: var(--bg-check-button);
 }
 
 .pill-indicator {
   width: 20px;
   height: 20px;
-  background-color: #ffffff;
+  background-color: var(--bg-input);
   border-radius: 50%;
   position: absolute;
   top: 2px;

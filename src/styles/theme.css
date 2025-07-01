@@ -4,7 +4,7 @@ body.light-theme {
   --bg-button: #d0d7df;
   --bg-button-hover: #c1c9d1;
   --bg-input: #ffffff;
-  --bg-check-button: #28a745;
+  --bg-check-button: #ab82ff;
 
   --text-primary: #212529;
   --text-secondary: #2c7be5;
@@ -22,4 +22,6 @@ body.light-theme {
   --color-b2: #f3d1ff;
   --color-c1: #a0e9e5;
   --color-c2: #ff80ab;
+
+  --color-error-hover: #eb6793;
 }
