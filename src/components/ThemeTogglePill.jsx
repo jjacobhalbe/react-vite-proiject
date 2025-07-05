@@ -1,5 +1,5 @@
-import React from 'react'
 import { useTheme } from '../context/ThemeContext'
+import { Sun, Moon } from 'lucide-react'
 
 const ThemeTogglePill = () => {
   const { isDarkMode, toggleTheme } = useTheme()
@@ -11,7 +11,13 @@ const ThemeTogglePill = () => {
         onClick={toggleTheme}
         aria-label="Toggle theme"
       >
-        <div className="pill-indicator"></div>
+        <div className={`pill-indicator ${isDarkMode ? 'moon' : 'sun'}`}>
+          {isDarkMode ? (
+            <Moon size={14} color="#fff" />
+          ) : (
+            <Sun size={14} color="#fff" />
+          )}
+        </div>
       </button>
     </div>
   )

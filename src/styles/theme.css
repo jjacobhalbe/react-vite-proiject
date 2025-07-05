@@ -20,8 +20,14 @@ body.light-theme {
   --color-a2: #fff3cd;
   --color-b1: #ffd6d6;
   --color-b2: #f3d1ff;
-  --color-c1: #a0e9e5;
+  --color-c1: #64ce7e;
   --color-c2: #ff80ab;
 
   --color-error-hover: #eb6793;
+  --color-a1-hover: #b2ebf2;
+  --color-a2-hover: #ffcc80;
+  --color-b1-hover: #ff9999;
+  --color-b2-hover: #d28eff;
+  --color-c1-hover: #4acfc9;
+  --color-c2-hover: #ff1f6b;
 }

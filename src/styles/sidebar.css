@@ -51,13 +51,14 @@
   background: none;
   border: none;
   color: var(--text-primary);
-  font-size: 18px;
+  font-size: 24px;
   cursor: pointer;
-  transition: color 0.2s ease;
+  transition: color 0.3s ease;
+  margin: 8px;
 }
 
 .close-btn:hover {
-  color: var(--text-secondary);
+  color: var(--bg-check-button);
 }
 
 .sidebar ul {
@@ -128,28 +129,7 @@
   text-decoration: underline;
 }
 
-.AA1 {
-  color: var(--color-a1);
-}
-.AA2 {
-  color: var(--color-a2);
-}
-.BB1 {
-  color: var(--color-b1);
-}
-.BB2 {
-  color: var(--color-b2);
-}
-.CC1 {
-  color: var(--color-c1);
-}
-.CC2 {
-  color: var(--color-c2);
-}
-
 .sidebar-buttons {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  align-items: center;
 }
