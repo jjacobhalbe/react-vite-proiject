@@ -36,8 +36,6 @@
   box-shadow: 3px 3px 8px var(--shadow-main);
   height: auto;
   max-height: 90vh;
-  overflow-y: auto;
-  overflow-x: hidden;
 }
 
 .sidebar.open {
