@@ -19,7 +19,9 @@ function App() {
   return (
     <ThemeProvider>
       <>
-        {showIntro && <IntroSection onClose={() => setShowIntro(false)} />}
+        {showIntro && (
+          <IntroSection onExitComplete={() => setShowIntro(false)} />
+        )}
 
         {!showIntro && (
           <>
