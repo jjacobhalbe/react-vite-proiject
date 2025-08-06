@@ -58,7 +58,7 @@ const FloatingLevels = ({ isExiting }) => {
               type: isExiting ? 'spring' : 'tween',
               stiffness: 100,
               damping: 15,
-              delay: 0, // no delay for falling animation
+              delay: 0,
             }}
             className="floating-level"
           >

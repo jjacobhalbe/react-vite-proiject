@@ -42,7 +42,6 @@ const IntroSection = ({ onExitComplete }) => {
           <button className="primary-btn" onClick={() => setIsExiting(true)}>
             Let's go!
           </button>
-          <button className="secondary-btn">How does it work?</button>
         </div>
       </section>
       <FloatingLevels isExiting={isExiting} />
