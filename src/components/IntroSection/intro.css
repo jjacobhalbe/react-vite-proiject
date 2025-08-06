@@ -7,12 +7,12 @@
   background-color: var(--bg-main);
   color: #fff;
   text-align: center;
-  padding: 6rem 1rem;
   overflow: hidden;
   z-index: 2;
   backdrop-filter: blur(2px);
   animation: fadeInIntro 0.8s ease forwards;
   transition: none;
+  padding-top: 6rem;
 }
 
 @keyframes fadeInIntro {
@@ -45,18 +45,6 @@
   align-items: center;
 }
 
-@keyframes pulseOpacity {
-  0% {
-    opacity: 0.15;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 0.15;
-  }
-}
-
 .intro-title {
   font-size: 3rem;
   font-weight: bold;
@@ -69,6 +57,7 @@
   color: #ccc;
   max-width: 700px;
   margin: 0 auto 2rem;
+  padding: 0rem 2rem 0rem 2rem;
 }
 
 .intro-buttons {
