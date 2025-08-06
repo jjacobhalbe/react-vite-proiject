@@ -6,6 +6,7 @@ import InputsContainer from './components/InputsContainer'
 import Sidebar from './components/Sidebar'
 import Hamburger from './components/Hamburger'
 import IntroSection from './components/IntroSection/IntroSection'
+import Footer from './components/footer/Footer'
 
 function App() {
   const [classifiedWords, setClassifiedWords] = useState([])
@@ -81,6 +82,7 @@ function App() {
                 wordResults={classifiedWords}
                 sentenceResults={sentences}
               />
+              <Footer />
             </motion.div>
           </motion.div>
         )}
